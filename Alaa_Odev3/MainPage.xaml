@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class=" Alaa_Odev3.MainPage">
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#BFA174" Offset="0.1" />
+            <GradientStop Color="#866133" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <VerticalStackLayout
+            Spacing="20"
+            Padding="20"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+
+
+            <Label
+                Text="Uygulamama Hoş Geldiniz!"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="White" />
+
+
+            <Frame
+                CornerRadius="24"
+                Padding="20"
+                HasShadow="True"
+                BackgroundColor="White"
+                VerticalOptions="Center"
+                WidthRequest="300">
+
+                <StackLayout Spacing="10">
+
+
+                    <StackLayout x:Name="loginStack" IsVisible="True" Spacing="15">
+                        <Label
+                            Text="Oturum Aç"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#333" />
+
+                        <Entry
+                            x:Name="txtEmail"
+                            Placeholder="Eposta"
+                            Keyboard="Email"
+                            BackgroundColor="#F8F8F8"
+                            TextColor="#333" />
+
+                        <Entry
+                            x:Name="txtPass"
+                            Placeholder="Parola"
+                            IsPassword="True"
+                            BackgroundColor="#F8F8F8"
+                            TextColor="#333" />
+
+                        <Button
+                            Text="Oturum Aç"
+                            TextColor="White"
+                            BackgroundColor="#866133"
+                            Clicked="loginClicked" />
+
+                        <Button
+                            Text="Hesabınız yok mu? Şimdi Katıl!"
+                            BackgroundColor="Transparent"
+                            TextColor="#866133"
+                            FontSize="16"
+                            Clicked="registerLogingPageView" />
+                    </StackLayout>
+
+
+                    <StackLayout x:Name="registerStack" IsVisible="False" Spacing="15">
+                        <Label
+                            Text="Kaydol"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            TextColor="#333" />
+
+                        <Entry
+                            x:Name="RtxtName"
+                            Placeholder="Adı Soyadı"
+                            Keyboard="Default"
+                            BackgroundColor="#F8F8F8"
+                            TextColor="#333" />
+
+                        <Entry
+                            x:Name="RtxtEmail"
+                            Placeholder="Eposta"
+                            Keyboard="Email"
+                            BackgroundColor="#F8F8F8"
+                            TextColor="#333" />
+
+                        <Entry
+                            x:Name="RtxtPass"
+                            Placeholder="Parola"
+                            IsPassword="True"
+                            BackgroundColor="#F8F8F8"
+                            TextColor="#333" />
+
+                        <Button
+                            Text="kaydol"
+                            TextColor="White"
+                            BackgroundColor="#866133"
+                            Clicked="registerClicked" />
+
+                        <Button
+                            Text="Zaten Hesabım var"
+                            BackgroundColor="Transparent"
+                            TextColor="#866133"
+                            FontSize="Medium"
+                            Clicked="registerLogingPageView" />
+                    </StackLayout>
+
+                </StackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

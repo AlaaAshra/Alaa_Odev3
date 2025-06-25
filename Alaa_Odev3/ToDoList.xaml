@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class=" Alaa_Odev3.ToDoList"
+             Title="Yapılacaklar">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="add1.png" Order="Primary" Priority="0" Clicked="addClicked" />
+        <ToolbarItem IconImageSource="refresh.png" Order="Primary" Priority="1" Clicked="refClicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ListView x:Name="taskListView" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Margin="10" Padding="10" HasShadow="True" BorderColor="Gray" CornerRadius="10" HeightRequest="220">
+                            <StackLayout Padding="10">
+                                <HorizontalStackLayout>
+                                    <CheckBox VerticalOptions="Center" IsChecked="{Binding IsComplete}" />
+                                    <Label Text="{Binding Name}" FontSize="Large" TextColor="Black" VerticalOptions="Center" />
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Detail}" FontSize="Medium" TextColor="Gray" />
+                                <Label Text="{Binding Date, StringFormat='{0:yyyy/MM/dd}'}" FontSize="Medium" TextColor="Gray" />
+                                <Label Text="{Binding Time, StringFormat='{0:hh\\:mm}'}" FontSize="Medium" TextColor="Gray" />
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="End" Spacing="10">
+                                    <Button Text="Düzenleme" BackgroundColor="#866133" TextColor="White" Clicked="OnEditClicked" />
+                                    <Button Text="Silme" BackgroundColor="#866133" TextColor="White" Clicked="OnDeleteClicked" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

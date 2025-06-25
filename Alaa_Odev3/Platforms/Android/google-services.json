@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "832394558856",
+    "project_id": "alaa-43b3d",
+    "storage_bucket": "alaa-43b3d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832394558856:android:80ab290dfd970c881dce3d",
+        "android_client_info": {
+          "package_name": "com.company.alaaproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyx4tVyq7NIk4GtyoB4_DqUB3wflZT9Eo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class=" Alaa_Odev3.Home"
+             Title="Home"
+             BackgroundColor="#BFA174">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Frame CornerRadius="20" HasShadow="False" Padding="0" HorizontalOptions="Center">
+                <Image Source="cat.jpeg" HorizontalOptions="Center" Aspect="AspectFill" />
+            </Frame>
+
+            <Frame CornerRadius="10" Padding="10" Margin="0,0,0,0" HasShadow="True" BorderColor="#100F10">
+
+                <Label Text="Alaa"
+					   SemanticProperties.HeadingLevel="Level1"
+					   FontSize="32"
+					   TextColor="#100F10"
+					   HorizontalOptions="Center" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="6" Margin="0,0,0,0" HasShadow="True" BorderColor="#100F10">
+
+                <Label Text="Ödev-3"
+                   FontSize="20"
+                   TextColor="#100F10"
+                    HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+            </Frame>
+            <Frame CornerRadius="10" Padding="6" Margin="0,0,0,0" HasShadow="True" BorderColor="#100F10">
+
+                <Label Text="Bartin Üniversitesi / Bilgisayar Mühendisliği"
+                   FontSize="18"
+                   TextColor="#100F10"
+                    HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

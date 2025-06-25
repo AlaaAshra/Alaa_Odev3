@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class=" Alaa_Odev3.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace: Alaa_Odev3"
+    Shell.FlyoutBehavior="Flyout"
+    Title="idris"
+    BackgroundColor="#866133"
+    TitleColor="White">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="#BFA174" Padding="10, 20">
+            <Label Text="Menü"
+               TextColor="White"
+               FontSize="Large"
+               VerticalOptions="Center"
+               HorizontalOptions="Start"/>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Home}"
+        Route="Home"
+        Icon="home2.png"/>
+
+    <ShellContent
+        Title="Doviz"
+        ContentTemplate="{DataTemplate local:Doviz}"
+        Route="Doviz" 
+        Icon="exchange.png"/>
+
+
+    <ShellContent
+        Title="Haberler"
+        ContentTemplate="{DataTemplate local:NewPage}"
+        Route="NewPage"
+        Icon="newspaper1.png"/>
+
+    <ShellContent
+        Title="Hava Durumu"
+        ContentTemplate="{DataTemplate local:HavaDurumu}"
+        Route="HavaDurumu"
+        Icon="weather.png"/>
+
+
+
+    <ShellContent
+        Title="Yapılacaklar"
+        ContentTemplate="{DataTemplate local:ToDoList}"
+        Route="ToDoList"
+        Icon="todolist1.png"/>
+
+
+
+    <ShellContent
+        Title="Ayarlar"
+        ContentTemplate="{DataTemplate local:Ayarlar}"
+        Route="Ayarlar"
+        Icon="settings.png"/>
+
+</Shell>
